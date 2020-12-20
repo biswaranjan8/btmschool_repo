@@ -1,0 +1,34 @@
+/*--Date and Time--*/
+div.dt{
+margin-left:85%;
+color:#581845;
+padding:5px;
+}
+section.container article.jumbotron div.btm{
+background-color:#27AF60;
+color:#fff;
+text-align:center
+}
+div.container div.btm_1{
+background-color:#2C3E50;
+color:gold;
+text-align:center;
+}
+div.btm_2{
+color:#fff;
+background-color:#27AE60;
+padding:50px;
+}
+div.container form.rgd_form{
+width:40%;
+}
+div.container div.rgd_container{
+margin-top:5%;
+border:2px solid black;
+}
+div.container div.rgd_container h2{
+text-align:center;
+background-color:#839192;
+padding:5px;
+color:#fff;
+}

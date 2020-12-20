@@ -1,0 +1,15 @@
+{%extends 'myschool/base.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="container">
+    <div class="jumbotron" >
+<h1>Please Sign up!!! </h1>
+    <form method="post" style="width:30%;height:40%;">
+        {% csrf_token %}
+        {{signupform |crispy}}
+        <button type="submit" value="sign up" class="btn btn-info btn-md">Sign up</button>
+    </form>
+        </div>
+</section>
+{% endblock %}

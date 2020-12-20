@@ -1,0 +1,52 @@
+body{
+}
+html{
+	height: 100%;
+}
+header{
+background-color:#3E4551;
+color:#fff;
+padding:12px;
+font-size:20px;
+text-align:center;
+}
+/*---navbar---*/
+.navbar #navbarSupportedContent .nav-item .nav-link{
+color:white;
+}
+
+/*---footer---*/
+.footer{
+  background: #C70039;
+  color:white;
+
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  }
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);}
+}
+.navbar.navbar-toggler.navbar-toggler-icon{
+  color: #fff;
+  border-color: #fff;
+  background-color: black;
+}
+

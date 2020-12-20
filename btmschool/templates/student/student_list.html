@@ -1,0 +1,49 @@
+{%extends 'myschool/base.html'%}
+{% load static %}
+{% block content %}
+<div>
+    <h1>student data</h1>
+    <table class="table" border="2">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>DOB</th>
+            <th>Place of Birth</th>
+            <th>Nation</th>
+            <th>State</th>
+            <th>Religion</th>
+            <th>Gender</th>
+            <th>Cast</th>
+            <th>Permanent</th>
+            <th>Pin Code</th>
+            <th>Blood Group</th>
+            <th>Identification mark</th>
+            <th>Other Info</th>
+        </tr>
+        </thead>
+        {%for n in std_list%}
+        <body>
+            <tr>
+                <td>{{n.name}}</td>
+                <td>{{n.ad_class}}</td>
+                <td>{{n.DOB}}</td>
+                <td>{{n.place_birth}}</td>
+                <td>{{n.nation}}</td>
+                <td>{{n.state}}</td>
+                <td>{{n.religion}}</td>
+                <td>{{n.gender}}</td>
+                <td>{{n.caste}}</td>
+                <td>{{n.permanent_address}}</td>
+                <td>{{n.pin_code}}</td>
+                <td>{{n.blood_group}}</td>
+                <td>{{n.identification_mark}}</td>
+                <td>{{n.other_info}}</td>
+            </tr>
+        </body>
+        {%endfor%}
+    </table>
+
+</div>
+
+{% endblock %}

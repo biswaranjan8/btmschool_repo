@@ -1,0 +1,22 @@
+{%extends 'myschool/base.html'%}
+{% load static %}
+{% block content %}
+<section class="container">
+<h1>BTM gallery </h1><hr>
+    <div class="row">
+        {%for i in img %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="thumbnail">
+              <a href="{{i.image.url}}" target="_blank">
+              <img src="{{i.image.url}}" alt="image" style="width:100%; border:2px solid black;">
+              <div class="caption">
+                  <p>{{i.title}}</p>
+              </div>
+              </a>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock %}

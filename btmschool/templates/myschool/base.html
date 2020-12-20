@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BTM|School</title>
+    <link rel = "icon" href = "{% static 'images/logo/btm_logo.png'%}" type = "image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/school_base.css'%}">
+    <link rel="stylesheet" href="{% static 'css/btm_home.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+<!--    <link rel="script" href="{% static '.js'%}">-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+<header>
+    <div>
+        BTM|School
+    </div>
+</header>
+<nav class="navbar navbar-expand-lg "  style="background-color: #C70039;">
+  <a href="#" class="navbar-brand"><img src="{% static 'images/logo/btm_logo.png' %}" alt="Logo" style="width:80px; height: 40px;"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link  fas fa-home" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="/std/register">Registration</a></li>
+        <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="/administrator">Administrator</a></li>
+        <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="/std/student_list">Student List</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About us</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More Info
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/events">EVENTS</a>
+          <a class="dropdown-item" href="#">ACADEMIC</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="/signup">Sign up</a></li>
+        <li class="nav-item"><a class="nav-link" href="/accounts/login">Sign in</a></li>
+        <li class="nav-item"><a class="nav-link" href="/accounts/logout">Sign Out</a></li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="get" action="/search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query" id="search">
+      <button class="btn btn-outline my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+{% block content %}
+{% endblock %}
+<!--Footer-->
+<div class="mt-5 pt-5 pb-5 footer">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-xs-12 about-company">
+      <h2>Quotes</h2>
+      <p class="pr-5 text-white-50">I climbed and climbed,Where is the peak ,my Lord?,I ploughed and ploughed,Where is the knowledge treasure,my lord?,I sailed and sailed, where is the island of peace,my Lord?
+      Almighty,bless my nation with vision and sweat resulting into happiness--By APJ Abdul Kalam.</p>
+      <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
+    </div>
+    <div class="col-lg-3 col-xs-12 links">
+      <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+        <ul class="m-0 p-0">
+          <li>- <a href="/about">About</a></li>
+          <li>- <a href="/news">News</a></li>
+          <li>- <a href="/gallery">Gallery</a></li>
+          <li>- <a href="/events">Event</a></li>
+          <li>- <a href="/">Home</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-4 col-xs-12 location">
+      <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+      <p>Plot-5/A-256, Kakatpur, Puri, Odisha</p>
+      <p class="mb-0"><i class="fa fa-phone mr-3"></i>(+91) 700-851-4891</p>
+      <p><i class="fa fa-envelope-o mr-3"></i>btmschool@btm.com</p>
+      <iframe id="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.412610187958!2d86.20675949999999!3d20.033153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x624a9e5a60e64328!2sPatharpaka%20Elementary%20School!5e0!3m2!1sen!2sin!4v1608056237671!5m2!1sen!2sin" width="250" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col copyright">
+      <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

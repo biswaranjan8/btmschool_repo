@@ -1,0 +1,16 @@
+{%extends 'myschool/base.html'%}
+{% load static %}
+{% block content %}
+<section>
+<h1>Update My gallery </h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Image Field:<input type="image" name="image" value="{{update_gallery.image.url}}"><br>
+        Title:<input type="text" name="title" value="{{update_gallery.title}}"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+</section>
+{% endblock %}

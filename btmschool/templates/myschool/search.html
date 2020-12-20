@@ -1,0 +1,17 @@
+{%extends 'myschool/base.html'%}
+{% load static %}
+{% block content %}
+<div>
+    {%if news%}
+    <h3>Search:{{query}} </h3><hr>
+        {%for i in news%}
+        <img src="{{i.image.url}}" alt="img" style="width:350px;height:350px">
+        <h5>{{i.title}}</h5>
+        <hp>{{i.body}}</hp>
+        {% endfor %}
+    {%else %}
+    <h3>Search:{{query}} </h3><hr>
+    <h2>Sorry here not available!!!..</h2>
+    {%endif%}
+</div>
+{% endblock %}

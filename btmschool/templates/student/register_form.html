@@ -1,0 +1,41 @@
+{%extends 'myschool/base.html'%}
+{% load static %}
+{% block content %}
+<div class="container">
+    {% if register%}
+    <h1><strong>Success your Register!! </strong></h1>
+    {% endif%}
+    <div class="rgd_container">
+        <h2>All fields are mandatory</h2><hr>
+        <form method="post"  class="rgd_form" action="{% url 'submit'%}">
+            {%csrf_token%}
+            <ul>
+                <li><h6>Name:{{rgd_form.name}}</h6></li>
+                <li><h6>Class:{{rgd_form.ad_class}}</h6></li>
+                <li><h6>Date of Birth:{{rgd_form.DOB}}</h6></li>
+                <li><h6>Place of birth:{{rgd_form.place_birth}}</h6></li>
+                <li><h6>Nation:{{rgd_form.nation}}</h6></li>
+                <li><h6>State:{{rgd_form.state}}</h6></li>
+                <li><h6>Religion:{{rgd_form.religion}}</h6></li>
+                <li><h6>Gender:{{rgd_form.gender}}</h6></li>
+                <li><h6>Caste:{{rgd_form.caste}}</h6></li>
+                <li><h6>Permanent Address:{{rgd_form.permanent_address}}</h6></li>
+                <li><h6>Pin Code:{{rgd_form.pin_code}}</h6></li>
+                <li><h6>Blood Group:{{rgd_form.blood_group}}</h6></li>
+                <li><h6>Identification Mark:{{rgd_form.identification_mark}}</h6></li>
+                <li><h6>Other Information:{{rgd_form.other_info}}</h6></li>
+                <li><canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas></li>
+                <li><input type="text" name="captcha" placeholder="Enter Captcha">
+                <button type="submit" value="submit" class="btn btn-success btn-md">submit</button></li>
+            </ul>
+        </form>
+    </div>
+
+</div>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText({{str_num}},10,50);
+</script>
+{% endblock %}

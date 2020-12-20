@@ -1,0 +1,16 @@
+{%extends 'myschool/base.html'%}
+{% load static %}
+{% block content %}
+
+<h1>Editing my gallery</h1>
+<div>
+    {% for x in edit_img%}
+    <img src="{{x.image.url}}" alt="image" class="img">
+    <p>{{x.title}}</p>
+    <div>
+        <a href="{% url 'delete' x.id %}" class="btn btn-danger btn-sm">Delete</a>&nbsp&nbsp
+        <a href="{% url 'update' x.id %}" class="btn btn-warning btn-sm">Update</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

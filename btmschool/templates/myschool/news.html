@@ -1,0 +1,40 @@
+{%extends 'myschool/base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="container" style="background-color:#E6E6E6 ">
+        <h1>
+            Today News
+        </h1>
+    <hr>
+    <div>
+        {% for i in page_news_object%}
+        <h3>
+            <strong>
+                {{i.title}}
+            </strong>
+        </h3>
+        <img src="{{i.image.url}}" alt="img" style="width:450px;height:350px">
+        <h5>
+            {{i.body}}
+        </h5>
+        <p>{{i.publish_date}}</p>
+        <br><hr><br>
+        {%endfor%}
+        <div>
+            <span>
+                {% if page_news_object.has_previous%}
+                <a href="?page={{page_news_object.previous_page_number}}" class="btn btn-info btm-sm"> Previous</a>
+                {% endif %}
+
+                &nbsp<span>{{ page_news_object.number}}</span>&nbsp
+
+                {% if page_news_object.has_next%}
+                <a href="?page={{page_news_object.next_page_number}}" class="btn btn-info btm-sm">Next</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
